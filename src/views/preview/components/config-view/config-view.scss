@@ -1,0 +1,53 @@
+@use '../../../../style/variables' as vars;
+
+.config-view {
+    position: relative;
+    // min-height: 700px;
+
+    h3 {
+        padding: 10px 20px;
+        background-color: vars.$color-primary;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 1rem;
+        color: vars.$white;
+        font-weight: vars.$font-weight-medium;
+    }
+
+    pre.syntax-highlighter {
+        margin: 0 !important;
+        padding: 24px;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        background-color: vars.$gray-light !important;
+        * {
+            background-color: vars.$gray-light !important;
+        }
+        code.language-json {
+            white-space: normal !important;
+        }
+    }
+    .error {
+        padding: 2em 0;
+        text-align: center;
+        font-size: 1.15em;
+    }
+
+    button {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        padding: 10px;
+        min-width: initial;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.80);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.30);
+        font-size: 1rem;
+
+        &:hover {
+            background-color: vars.$color-primary-hover;
+            color: vars.$white;
+        }
+    }
+}

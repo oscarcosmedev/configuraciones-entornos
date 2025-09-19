@@ -1,0 +1,95 @@
+@use '../../../../style/variables' as vars;
+@use '../../../../style/mixins' as mix;
+
+
+.edicion-search-form {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    .new-entry {
+        margin: 0 0 20px 0;
+        @include mix.flex-center($justify:flex-end);
+        @include mix.respond-to('xs', null) {
+            margin: 0 0 2rem 0;
+        }
+        button {
+            min-width: 120px;
+            padding: 13px 37px;
+            @include mix.flex-center($gap: 10px);
+            background-color: vars.$color-primary;
+            color: vars.$white;
+            border-color: vars.$color-primary;
+            border-radius: 6px;
+            line-height: 1;
+            @include mix.respond-to('xs', null) {
+                width: 100%;
+            }
+        }
+    }
+    
+    .field-title {
+        padding-bottom: 7px;
+        display: grid;
+        grid-template-columns: 40px 1fr .75fr 1fr;
+        gap: 6px;
+        @include mix.respond-to('xs', null) {
+            display: none;
+        }
+    }
+
+    form {
+        gap: 1rem;
+        fieldset {
+            gap: 6px;
+        }
+    }
+
+    fieldset {
+        @include mix.respond-to('xs', null) {
+            padding: 1rem;
+            border-radius: .5rem;
+            background-color: vars.$color-cebrado;
+        }
+        .less-more {
+            @include mix.respond-to('xs', null) {
+                order: 1;
+                margin-top: 1rem;
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    .button-actions {
+        @include mix.flex-center($justify:flex-start);
+        .button--add-filter {
+            padding: .75rem 0;
+            min-width: initial;
+            background-color: transparent;
+            color: #0D6EFD;
+            border: none;
+            font-size: 15px;
+            &:hover {
+                // background-color: vars.$gray-light;
+                background-color: transparent;
+                color: inherit;
+                text-decoration: underline;
+            }
+            [class*="fa-plus"] {
+                color: #278D3E;
+            }
+        }
+
+        .button-submit {
+            padding: 13px 37px;
+        }
+
+        &:nth-of-type(2) {
+            justify-content: flex-end;
+        }
+        @include mix.respond-to('xs', null) {
+            flex-direction: column;
+        }
+    }
+
+}

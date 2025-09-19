@@ -1,0 +1,4 @@
+@use '../../style/mixins' as mix;
+.error-container {
+    @include mix.flex-center();
+}

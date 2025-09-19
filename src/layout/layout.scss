@@ -1,0 +1,38 @@
+@use '../style/mixins' as mix;
+
+.layout {
+    display: flex;
+    flex: 1;
+
+    .container {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .content__page {
+        padding: 2rem;
+        // position: relative;
+        flex: 1;
+        overflow: auto;
+        @include mix.respond-to('sm', null) {
+            padding: 0 0 2rem 0;
+        }
+    }
+
+    .page-title {
+        display: none;
+        h2 {
+            // padding: 1rem 0 2rem 0;
+            margin: 1rem 0;
+            @include mix.respond-to('sm', null) {
+                padding-bottom: .5rem;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: .3);
+                font-size: 1em;
+                text-align: center;
+            }
+        }
+        @include mix.respond-to('sm', null) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+form.new-entry-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+form.new-entry-modal input::-moz-placeholder {
+  opacity: 0.6;
+}
+form.new-entry-modal input::placeholder {
+  opacity: 0.6;
+}/*# sourceMappingURL=new-entry-modal.css.map */

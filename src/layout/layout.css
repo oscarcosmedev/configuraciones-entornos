@@ -1,0 +1,40 @@
+/**
+ * Variables de estilos globales
+ */
+.layout {
+  display: flex;
+  flex: 1;
+}
+.layout .container {
+  display: flex;
+  margin: 0 auto;
+}
+.layout .content__page {
+  padding: 2rem;
+  flex: 1;
+  overflow: auto;
+}
+@media (width <= 768px) {
+  .layout .content__page {
+    padding: 0 0 2rem 0;
+  }
+}
+.layout .page-title {
+  display: none;
+}
+.layout .page-title h2 {
+  margin: 1rem 0;
+}
+@media (width <= 768px) {
+  .layout .page-title h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    text-align: center;
+  }
+}
+@media (width <= 768px) {
+  .layout .page-title {
+    display: block;
+  }
+}/*# sourceMappingURL=layout.css.map */

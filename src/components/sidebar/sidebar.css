@@ -1,0 +1,136 @@
+/**
+ * Variables de estilos globales
+ */
+aside {
+  position: sticky;
+  top: 4.5rem;
+  height: calc(100vh - 4.5rem);
+  width: 210px;
+  background-color: #0E002A;
+}
+aside .sidebar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+aside .sidebar-header a {
+  display: block;
+  padding: 1em;
+}
+aside .icon-close {
+  display: none;
+  padding: 1rem;
+}
+@media (width <= 768px) {
+  aside .icon-close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+aside .icon-close .icon {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+@media (width <= 768px) {
+  aside .icon-close .icon {
+    display: block;
+  }
+}
+aside h3 {
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+  align-items: center;
+  gap: initial;
+  color: rgba(216, 216, 216, 0.5);
+  font-size: 14px;
+  white-space: nowrap;
+}
+aside h3 [data-prefix=fad] {
+  padding-right: 10px;
+  color: #008CD2;
+  font-size: 20px;
+}
+@media (width <= 768px) {
+  aside.sidebar {
+    padding-top: 4.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    height: 100dvh;
+    transform: translateX(-100%);
+    transition: opacity 0s ease-in-out, transform 0.3s ease-in-out;
+    background-color: rgba(14, 0, 42, 0.95);
+  }
+  aside.sidebar--open {
+    transform: translateX(0);
+  }
+  aside.sidebar.sidebar--open + .content__page {
+    pointer-events: none;
+  }
+}
+@media (width <= 576px) {
+  aside.sidebar--open {
+    width: 100vw;
+  }
+}
+
+.sidebar-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 4.5rem;
+  left: 0;
+  z-index: 8;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.sidebar-overlay.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  padding: 12px 10px 12px 20px;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+  border-bottom: 1px solid #008CD2;
+  color: #008CD2;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav a:first-child {
+  border-top: 1px solid #008CD2;
+}
+nav a:hover {
+  background-color: #008CD2;
+  color: #ffffff;
+}
+nav a.bg-primary {
+  color: #ffffff;
+}
+nav [data-prefix=far] {
+  margin-right: 10px;
+  font-size: 12px;
+}
+@media (width <= 576px) {
+  nav {
+    font-size: 1.15em;
+    line-height: 2;
+  }
+}/*# sourceMappingURL=sidebar.css.map */

@@ -1,0 +1,47 @@
+@use '../../../../style/variables' as vars;
+@use '../../../../style/mixins' as mix;
+
+.search-form {
+    @include mix.flex-center($gap:initial);
+    flex-direction: initial;
+    justify-content: space-between;
+    padding: 20px;
+    // margin-top: 37px;
+    margin-bottom: 25px;
+    background-color: rgba(0, 140, 210, .15);
+    @include mix.respond-to('sm', null) {
+        margin-top: 0;
+    }
+
+
+    form {
+        fieldset {
+            margin: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            @include mix.respond-to('md') {
+                flex-direction: column;
+            }
+        }
+    }
+
+    button {
+        padding: initial;
+    }
+
+    .button-actions {
+        flex: 1;
+        gap: 10px;
+        @include mix.respond-to('md', null) {
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        @include mix.respond-to('xs', null) {
+            flex-direction: column;
+            button:first-child {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

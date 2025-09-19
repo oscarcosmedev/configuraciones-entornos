@@ -1,0 +1,185 @@
+/**
+ * Variables de estilos globales
+ */
+.edicion-config-results {
+  margin-bottom: 4rem;
+}
+.edicion-config-results .global-filter {
+  display: none;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.edicion-config-results .global-filter input {
+  padding-left: 3rem;
+}
+.edicion-config-results .global-filter button {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.edicion-config-results table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+@media (width <= 576px) {
+  .edicion-config-results table {
+    font-size: 0.8rem;
+  }
+}
+.edicion-config-results table colgroup col:nth-child(1) {
+  width: 12%;
+}
+.edicion-config-results table colgroup col:nth-child(2) {
+  width: 13%;
+}
+.edicion-config-results table colgroup col:nth-child(3) {
+  width: 20%;
+}
+.edicion-config-results table colgroup col:nth-child(4) {
+  width: 43%;
+}
+.edicion-config-results table colgroup col:nth-child(5) {
+  width: 12%;
+}
+.edicion-config-results thead {
+  background-color: #008CD2;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+}
+.edicion-config-results thead div {
+  display: flex;
+}
+.edicion-config-results thead span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.edicion-config-results tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+.edicion-config-results th, .edicion-config-results td {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+  white-space: normal;
+}
+@media (width <= 576px) {
+  .edicion-config-results th, .edicion-config-results td {
+    padding: 0.7rem 0.35rem;
+  }
+}
+.edicion-config-results .sortable {
+  cursor: pointer;
+}
+.edicion-config-results .sortable .svg-inline--fa {
+  font-size: 1.25em;
+  padding-left: 0.5rem;
+}
+.edicion-config-results .actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.edicion-config-results .actions .action-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.edicion-config-results .actions .action-icons button {
+  color: inherit;
+}
+.edicion-config-results .actions .dropdown {
+  display: none;
+  position: relative;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  min-width: 160px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.13);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  list-style: none;
+  font-size: 1.15em;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu.drop-up {
+  top: auto;
+  bottom: 100%;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu li button {
+  color: #008CD2;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu li:hover {
+  background-color: #f0f8ff;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu input, .edicion-config-results .actions .dropdown .dropdown-menu button {
+  margin-right: 0.5rem;
+}
+.edicion-config-results .actions .dropdown .dropdown-menu label {
+  display: flex;
+  align-items: center;
+}
+.edicion-config-results .actions .dropdown .dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  font-size: 1.15em;
+}
+.edicion-config-results .actions .dropdown .dropdown-toggle button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #008CD2;
+  font-weight: bold;
+}
+.edicion-config-results .actions .dropdown .dropdown-toggle button:hover {
+  background-color: #f0f8ff;
+}
+@media (width <= 1200px) {
+  .edicion-config-results table colgroup col:nth-child(1) {
+    width: 15%;
+  }
+  .edicion-config-results table colgroup col:nth-child(2) {
+    width: 15%;
+  }
+  .edicion-config-results table colgroup col:nth-child(3) {
+    width: 20%;
+  }
+  .edicion-config-results table colgroup col:nth-child(4) {
+    width: 40%;
+  }
+  .edicion-config-results table colgroup col:nth-child(5) {
+    width: 10%;
+  }
+  .edicion-config-results table thead th:nth-child(5) {
+    opacity: 0;
+    font-size: 0.25rem;
+  }
+  .edicion-config-results .actions .action-icons {
+    display: none;
+  }
+  .edicion-config-results .actions .dropdown {
+    display: block;
+  }
+}/*# sourceMappingURL=edicion-config-results.css.map */

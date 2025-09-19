@@ -1,0 +1,105 @@
+/**
+ * Variables de estilos globales
+ */
+.edicion-search-form {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.edicion-search-form .new-entry {
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+@media (width <= 576px) {
+  .edicion-search-form .new-entry {
+    margin: 0 0 2rem 0;
+  }
+}
+.edicion-search-form .new-entry button {
+  min-width: 120px;
+  padding: 13px 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #008CD2;
+  color: #ffffff;
+  border-color: #008CD2;
+  border-radius: 6px;
+  line-height: 1;
+}
+@media (width <= 576px) {
+  .edicion-search-form .new-entry button {
+    width: 100%;
+  }
+}
+.edicion-search-form .field-title {
+  padding-bottom: 7px;
+  display: grid;
+  grid-template-columns: 40px 1fr 0.75fr 1fr;
+  gap: 6px;
+}
+@media (width <= 576px) {
+  .edicion-search-form .field-title {
+    display: none;
+  }
+}
+.edicion-search-form form {
+  gap: 1rem;
+}
+.edicion-search-form form fieldset {
+  gap: 6px;
+}
+@media (width <= 576px) {
+  .edicion-search-form fieldset {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f0f8ff;
+  }
+}
+@media (width <= 576px) {
+  .edicion-search-form fieldset .less-more {
+    order: 1;
+    margin-top: 1rem;
+    font-size: 1.4em;
+  }
+}
+.edicion-search-form .button-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.edicion-search-form .button-actions .button--add-filter {
+  padding: 0.75rem 0;
+  min-width: initial;
+  background-color: transparent;
+  color: #0D6EFD;
+  border: none;
+  font-size: 15px;
+}
+.edicion-search-form .button-actions .button--add-filter:hover {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: underline;
+}
+.edicion-search-form .button-actions .button--add-filter [class*=fa-plus] {
+  color: #278D3E;
+}
+.edicion-search-form .button-actions .button-submit {
+  padding: 13px 37px;
+}
+.edicion-search-form .button-actions:nth-of-type(2) {
+  justify-content: flex-end;
+}
+@media (width <= 576px) {
+  .edicion-search-form .button-actions {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=edicion-search-form.css.map */

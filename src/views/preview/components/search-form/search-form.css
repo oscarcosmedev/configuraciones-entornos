@@ -1,0 +1,52 @@
+/**
+ * Variables de estilos globales
+ */
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  flex-direction: initial;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: rgba(0, 140, 210, 0.15);
+}
+@media (width <= 768px) {
+  .search-form {
+    margin-top: 0;
+  }
+}
+.search-form form fieldset {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (width <= 992px) {
+  .search-form form fieldset {
+    flex-direction: column;
+  }
+}
+.search-form button {
+  padding: initial;
+}
+.search-form .button-actions {
+  flex: 1;
+  gap: 10px;
+}
+@media (width <= 992px) {
+  .search-form .button-actions {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+@media (width <= 576px) {
+  .search-form .button-actions {
+    flex-direction: column;
+  }
+  .search-form .button-actions button:first-child {
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=search-form.css.map */

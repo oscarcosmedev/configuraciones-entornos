@@ -1,0 +1,95 @@
+/**
+ * Variables de estilos globales
+ */
+
+//----------------------------------------------
+// -- Colores --
+
+// Acento
+$color-primary          : #008CD2;
+$color-primary-hover    : #1D8FFF;
+$color-primary-disabled : #B1C5E2;
+$color-secondary        : #0E002A;
+$color-secondary-hover  : #F2F7FF;
+$color-cebrado          : #f0f8ff;
+
+// Tipografia
+$color-text-primary     : #394049;
+$color-text-secondary   : #4F7396;
+$color-text-disabled    : #D1DBE8;
+
+// Sings
+$color-ok               : #4BAB50;
+$color-warning          : #FC9D19;
+$color-waiting          : $color-primary;
+$color-error            : #DE3535;
+
+// Neutros
+$white                  : #ffffff;
+$black                  : #000000;
+
+
+$color-border-frames    : #D1DBE8;
+
+$gray                   : #999999;
+$gray-medium            : #cccccc;
+$gray-light             : #E8E8E8;
+$gray-lighter           : #F5F5F5;
+$gray-divider           : #dbdbdb;
+
+
+//----------------------------------------------
+// -- Fonts -- 
+// Font Size
+$base-font-size         : 14px;
+$mobile-font-scale      : 1.2;
+
+//Font family
+$font-primary           : "Roboto", sans-serif;
+$font-secondary         : Arial, Tahoma, Sans-serif;
+
+//Font Weight
+$font-weight-regular    : 400;
+$font-weight-medium     : 500;
+$font-weight-semibold   : 600;
+$font-weight-bold       : 700;
+$font-weight-black      : 900;
+
+//----------------------------------------------
+// -- HTML --
+
+//Header
+$header-height          : 66px;
+$header-height-sm       : 56px;
+
+// Contenedor
+$container              : 1320px;
+$gap                    : 1rem;
+
+// Buttons
+$button-default         : $white;
+$button-bg              : $color-primary;
+$button-bg-hover        : #D9D9D9;
+$button-disable         : #B4B9BD;
+$button-border-color    : #707070;
+
+
+// Modal
+$modal-radius           : 10px;
+$modal-bg               : $white;
+$overlay-bg             : rgba(0, 0, 0, .55);
+$duration               : .25s;
+$easing                 : cubic-bezier(.25, .8, .25, 1);
+
+
+
+// Brackpoints
+$breakpoints: (
+    xxs   : 414px,
+    xs    : 576px,
+    sm    : 768px,
+    md    : 992px,
+    lg    : 1200px,
+    xl    : 1325px,
+    xxl   : 1440px,
+);

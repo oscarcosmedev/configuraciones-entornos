@@ -1,0 +1,46 @@
+@use '../../../../style/variables' as vars;
+@use '../../../../style/mixins' as mix;
+
+.form-from-to {
+    h3 {
+        padding: 10px 20px;
+        background-color: vars.$color-primary;
+        border-radius: 5px 5px 0px 0px;
+        color: vars.$white;
+        font-size: 1rem;
+        font-weight: vars.$font-weight-medium;
+    }
+    form {
+        gap: initial;
+    }
+    
+    fieldset {
+        margin: 0;
+        padding: 30px 1rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        background-color: rgba(0, 140, 210, 0.15);
+        @include mix.respond-to('sm') {
+            flex-direction: column;
+            align-items: center;
+        }
+        & > div {
+            max-width: 400px;
+            @include mix.respond-to('sm', null) {
+                margin-bottom: 2rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .button-actions {
+        margin-top: 1rem;
+        @include mix.flex-center($justify:flex-end);
+        @include mix.respond-to('xs') {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

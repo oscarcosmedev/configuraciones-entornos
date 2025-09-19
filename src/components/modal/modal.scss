@@ -1,0 +1,55 @@
+@use '../../style/variables' as vars;
+@use '../../style/mixins' as mixin;
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: vars.$overlay-bg;
+    backdrop-filter: blur(2px);
+    animation: fade-in vars.$duration vars.$easing;
+    z-index: 1000;
+}
+
+
+.modal {
+    width: min(560px, 92%);
+    max-height: 90dvh;
+    overflow-y: auto;
+    background: vars.$modal-bg;
+    border-radius: vars.$modal-radius;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    transform: translateY(15px) scale(.96);
+    animation: pop-in vars.$duration vars.$easing forwards;
+    cursor: default;
+    .modal-header {
+        h3 {
+            @include mixin.flex-center($gap:14px);
+        }
+        [class*="fa"] {
+            font-size: 16px;
+        }
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pop-in {
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}

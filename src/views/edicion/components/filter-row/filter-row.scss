@@ -1,0 +1,63 @@
+@use '../../../../style/mixins' as mix;
+
+.edicion-search-form {
+    fieldset {
+        margin-bottom: initial;
+        display: grid;
+        grid-template-columns: 40px 1fr .75fr 1fr;
+        @include mix.respond-to('xs', null) {
+            grid-template-columns: 1fr;
+            margin-bottom: 2rem;
+        }
+        .field-select {
+            flex-direction: column;
+            @include mix.respond-to('xs', null) {
+                margin-bottom: 1rem;
+            }
+            label {
+                display: none;
+                padding-bottom: .5rem;
+                font-weight: bold;
+                @include mix.respond-to('xs', null) {
+                    display: block;
+                }
+            }
+            [data-icon=chevron-down] {
+                top: 70%;
+                @include mix.respond-to(null, 'xs') {
+                    top: 50%;
+                }
+            }
+        }
+    }
+
+    .less-more {
+        justify-content: space-between;
+        align-items: center;
+        gap: 6px;
+        padding: 0 5px 0 0;
+        @include mix.respond-to('xs', null) {
+            // justify-content: flex-end;
+            // gap: 1rem
+            flex-direction: row-reverse;
+        }
+
+        [class*='fa-plus'] {
+            color: #278D3E;
+        }
+        [class*='fa-xmark'] {
+            color: #AD0000;
+        }
+        button {
+            padding: 0;
+            font-size: 15px;
+            &.disabled {
+                opacity: .6;
+                pointer-events: none;
+            }
+            @include mix.respond-to('xs', null) {
+                font-size: 1.2em;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use './mixins' as mix;
+
+#modal-root {
+    .modal-header {
+        padding: 18px 21px 18px 15px;
+        @include mix.flex-center($gap: 0, $justify: space-between);
+    
+        h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    
+        .btn-close {
+            background: none;
+            border: none;
+            padding: .25rem;
+            line-height: 0;
+            cursor: pointer;
+    
+            svg {
+                font-size: 1.15rem;
+            }
+        }
+    }
+    
+    .modal-body {
+        padding: 30px;
+        border-top: 1px solid #DEE2E6;
+        border-bottom: 1px solid #DEE2E6;
+    
+        fieldset {
+            margin-bottom: 20px;
+            gap: 5px;
+    
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+    
+        label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    
+    .modal-footer {
+        padding: 15px 17px;
+        @include mix.flex-center($justify: flex-end, $gap: 15px);
+        @include mix.respond-to('xs', null) {
+            flex-direction: column;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+
+form.new-entry-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    input::placeholder {
+        opacity: .6;
+    }
+}

@@ -1,0 +1,70 @@
+/**
+ * Variables de estilos globales
+ */
+.edicion-search-form fieldset {
+  margin-bottom: initial;
+  display: grid;
+  grid-template-columns: 40px 1fr 0.75fr 1fr;
+}
+@media (width <= 576px) {
+  .edicion-search-form fieldset {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+}
+.edicion-search-form fieldset .field-select {
+  flex-direction: column;
+}
+@media (width <= 576px) {
+  .edicion-search-form fieldset .field-select {
+    margin-bottom: 1rem;
+  }
+}
+.edicion-search-form fieldset .field-select label {
+  display: none;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+@media (width <= 576px) {
+  .edicion-search-form fieldset .field-select label {
+    display: block;
+  }
+}
+.edicion-search-form fieldset .field-select [data-icon=chevron-down] {
+  top: 70%;
+}
+@media (width >= 576px) {
+  .edicion-search-form fieldset .field-select [data-icon=chevron-down] {
+    top: 50%;
+  }
+}
+.edicion-search-form .less-more {
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 0 5px 0 0;
+}
+@media (width <= 576px) {
+  .edicion-search-form .less-more {
+    flex-direction: row-reverse;
+  }
+}
+.edicion-search-form .less-more [class*=fa-plus] {
+  color: #278D3E;
+}
+.edicion-search-form .less-more [class*=fa-xmark] {
+  color: #AD0000;
+}
+.edicion-search-form .less-more button {
+  padding: 0;
+  font-size: 15px;
+}
+.edicion-search-form .less-more button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+@media (width <= 576px) {
+  .edicion-search-form .less-more button {
+    font-size: 1.2em;
+  }
+}/*# sourceMappingURL=filter-row.css.map */
