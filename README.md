@@ -3,6 +3,9 @@
 ## Descripción
 Aplicación web para la gestión y configuración de entornos, permitiendo visualizar, editar y transferir configuraciones entre diferentes ambientes. Esta herramienta facilita la administración centralizada de parámetros de configuración en distintos clusters y aplicaciones.
 
+## Demo
+- [Link](https://majestic-tapioca-29ad2c.netlify.app/) del proyecto
+
 ## Stack Tecnológico
 
 ### Frontend
@@ -29,5 +32,3 @@ Aplicación web para la gestión y configuración de entornos, permitiendo visua
 - **MSW (Mock Service Worker)**: Simulación de API para desarrollo y pruebas
 - **Vitest**: Framework de testing
 - **SVGO**: Optimización de archivos SVG
-
-## Estructura del Proyecto
